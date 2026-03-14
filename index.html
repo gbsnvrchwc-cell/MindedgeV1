@@ -906,7 +906,7 @@ function showPage(id, btn) {
   document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
   document.getElementById('page-' + id).classList.add('active');
   btn.classList.add('active');
-  if (id === 'masters' && !document.getElementById('psych-grid').innerHTML.trim()) renderMasters();
+ if (id === 'masters') renderMasters();
   if (id === 'scenarios' && !document.getElementById('scenario-body').textContent.trim()) loadNewScenario();
   if (id === 'biases' && !document.getElementById('bias-grid').innerHTML.trim()) renderBiases();
 }
@@ -1247,6 +1247,7 @@ function clearCoach() {
 
 // INIT
 loadNewScenario();
+renderMasters();
 </script>
 </body>
 </html>
